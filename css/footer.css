@@ -1,0 +1,50 @@
+
+
+
+.rodape{
+    background-color: #8B0000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  footer h2 {
+    color: #DFC571;
+  }
+  
+  .info-left{
+    margin-left: 30px;
+  }
+  
+  .info-left .contatos-icons{
+    margin-bottom: 20px;
+  }
+  
+  .info-left .contatos-icons img{
+    margin-right: 10px;
+  }
+  
+  .info-right{
+    margin-right: 50px;
+  }
+  
+  .info-right a {
+    color: white;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  .info-right ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .onda{
+    margin-bottom: -10px;
+    max-width: 100%;
+  }
+  
+  

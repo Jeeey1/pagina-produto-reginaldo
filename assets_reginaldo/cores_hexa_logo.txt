@@ -1,0 +1,12 @@
+tons amarelo:
+
+Dourado pastel: #EEDC8A
+Dourado mais escuro: #AD7A3A
+Dourado brilhante: #FBEA71
+Dourado entre pastel e escuro: #DFC571
+
+Vermelho: #EB3038
+
+Cinza escuro letra "R" e escrita: #201Ef1
+
+Cinza claro Letra "E": #5F5E63
