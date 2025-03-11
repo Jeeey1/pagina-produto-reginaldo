@@ -1,15 +1,3 @@
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.position-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .img {
   background-image: url(../assets_reginaldo/bovina.jpeg);
@@ -24,31 +12,37 @@
 #produtos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
 }
 
-.container {
+#produtos div {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+}
+
+#produtos div[data-cod]{
+  margin-bottom: 50px;
 }
 
 div.ativo [data-button="add"] {
-  display: none;
+  display: none !important;
 }
 
 div.ativo .btn-number {
-  display: block;
+  display: block !important;
 }
 
-.container h1 {
-  max-width: 250px;
-}
-
-.container h1,
+.container h3,
 .container p {
   text-align: center;
   margin-top: 5px;
+}
+
+.container h3{
+  font-size: 0.9rem;
 }
 
 .preco {
@@ -63,27 +57,39 @@ div.ativo .btn-number {
 
 .btn-number {
   margin-top: 10px;
-  display: none;
+  display: none !important;
 }
 
 .btn-number input {
   text-align: center;
-  font-weight: bold;
+  /* font-weight: bold; */
   width: 40px;
+  border: 1px solid #000;
+  border-radius: 4px;
 }
 
 .btn-number button {
-  padding: 1px 3px;
+  padding: 0px 3px 0px 3px;
+}
+
+.titulo-produto{
+  font-weight: bold;
+  color: #201E1F;
+  background-color: #EEDC8A;
+  padding-left: 120px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Formulário de orçamento */
 
 #formulario {
   margin-top: 50px;
-  width: 550px;
-  margin-bottom: 300px;
+  max-width: 550px;
+  margin-bottom: 100px;
   display: grid;
   grid-template-columns: 1fr;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .titulo-form {
@@ -130,7 +136,7 @@ div.ativo .btn-number {
 }
 
 .informa-retirada {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 10px;
 }
@@ -138,6 +144,10 @@ div.ativo .btn-number {
 .informa-retirada img {
   width: 20px;
   margin-top: 5px;
+}
+
+.informa-retirada.ativo{
+  display: flex;
 }
 
 .produtos-selecionados {
@@ -165,41 +175,7 @@ div.ativo .btn-number {
   outline: none;
 }
 
-/* Campo de preencher dados de entrega caso seja entrega */
-.entrega-open.ativo {
-  display: block;
-}
 
-.entrega-open {
-  display: none;
-  box-sizing: border-box;
-  margin-bottom: 25px;
-}
-
-.entrega-open h3 {
-  color: #8b0000;
-}
-
-.entrega-open label {
-  display: block;
-  margin-top: 25px;
-}
-
-.entrega-open input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px 15px;
-  background-color: #d9d9d9;
-  outline: none;
-  border: none;
-}
-
-.rua-numero {
-  display: grid;
-  grid-template-columns: 5fr 1fr;
-  align-items: center;
-  gap: 10px;
-} /* Fim campo de dados de entrega */
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
