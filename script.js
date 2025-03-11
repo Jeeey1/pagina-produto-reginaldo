@@ -44,6 +44,7 @@ function recebeDados(div, dados) {
   const nomeProduto = div.querySelector("h3").innerText;
   const precoProduto = +div.querySelector(".preco").innerText.replace(",", ".");
   const areaProdutos = document.querySelector(".produtos-selecionados");
+  const button = div.querySelector('[data-button="add"]');
 
   const info = div.dataset.cod;
   const elementoExistente = document.querySelector(`div[data-id="${info}"]`);
@@ -56,13 +57,23 @@ function recebeDados(div, dados) {
 
   if (!elementoExistente && div.classList.contains("ativo")) {
     const novoElemento = document.createElement("div");
-    areaProdutos.appendChild(novoElemento);
-    novoElemento.innerText = `${dados.nome} - x${dados.qtd} pacote(s) - R$${total}`;
     novoElemento.setAttribute("data-id", `${info}`);
-  } else {
+    if(isNaN(Number(info))){
+    novoElemento.innerText = `Porção ${dados.nome} - Pacote c/ ${dados.qtd} Kg(s) - R$${total}`;
+    } else {
+    novoElemento.innerText = `Espeto ${dados.nome} - x${dados.qtd} pacote(s) - R$${total}`;
+    }
+    areaProdutos.appendChild(novoElemento);
+  } else if(elementoExistente) {
     removeProduto(div, dados);
-    elementoExistente.innerText = `${dados.nome} - x${dados.qtd} pacote(s) - R$${total}`;
+    if(isNaN(Number(info))){
+      console.log(true)
+      elementoExistente.innerText = `Porção ${dados.nome} - Pacote c/ ${dados.qtd} Kg(s) - R$${total}`;
+      } else {
+        elementoExistente.innerText = `Espeto ${dados.nome} - x${dados.qtd} pacote(s) - R$${total}`;
+      }
   }
+  console.log(Number(info));
 }
 
 function removeProduto(div, dados) {
