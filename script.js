@@ -41,7 +41,7 @@ function plusOrMinus(div) {
 
 function recebeDados(div, dados) {
   const inputQtd = div.querySelector(".btn-number input");
-  const nomeProduto = div.querySelector("h1").innerText;
+  const nomeProduto = div.querySelector("h3").innerText;
   const precoProduto = +div.querySelector(".preco").innerText.replace(",", ".");
   const areaProdutos = document.querySelector(".produtos-selecionados");
 
@@ -60,7 +60,7 @@ function recebeDados(div, dados) {
     novoElemento.innerText = `${dados.nome} - x${dados.qtd} pacote(s) - R$${total}`;
     novoElemento.setAttribute("data-id", `${info}`);
   } else {
-    removeProduto(div, dados);a
+    removeProduto(div, dados);
     elementoExistente.innerText = `${dados.nome} - x${dados.qtd} pacote(s) - R$${total}`;
   }
 }
