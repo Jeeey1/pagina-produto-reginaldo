@@ -54,9 +54,13 @@ div.ativo .btn-number {
 }
 
 [data-button="add"] {
-  padding: 2px 7px;
+  padding: 5px 10px;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 10px;
+  background-color: #8b0000;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
 }
 
 .btn-number {
@@ -74,6 +78,11 @@ div.ativo .btn-number {
 
 .btn-number button {
   padding: 0px 3px 0px 3px;
+}
+
+.btn-number .minus,
+.btn-number .plus{
+  padding: 0px 5px 0px 5px;
 }
 
 .titulo-produto{
@@ -187,13 +196,13 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1100px) {
   #produtos {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   #produtos {
     grid-template-columns: 1fr;
   }
