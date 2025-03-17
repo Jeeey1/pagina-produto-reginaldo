@@ -1,5 +1,6 @@
 const parentButton = document.querySelectorAll("[data-cod]");
 const radioButton = document.querySelector("[type='radio']");
+const btnOrcamento = document.querySelector('.enviar-orcamento');
 
 radioButton.addEventListener('click', informaRetirada);
 
@@ -91,5 +92,44 @@ function informaRetirada(event) {
   if(event.target === this){
     infoRetirada.classList.add('ativo');
   }
-  
 }
+
+
+btnOrcamento.addEventListener('click', (e) => {
+  e.preventDefault();
+  verificaErro();
+})
+
+function verificaErro(){
+  const inputNome = document.getElementById('nome');
+  const newPara = document.createElement('p');
+  const fieldNewErroInput = document.querySelector('.erro-input');
+  const fielNewErroCheck = document.querySelector('.erro-check');
+  const paraInputErro = document.querySelector('.ativo-erro-check');
+  const paraCheckErro = document.querySelector('.ativo-erro-input');
+  newPara.style.color = 'red';
+
+  if(!radioButton.checked){
+    newPara.innerText = 'Selecione a opção de retirada antes de enviar';
+    newPara.classList.add('ativo-erro-check')
+    if(!paraCheckErro)
+    fielNewErroCheck.appendChild(newPara);
+  } else {
+    paraCheckErro.remove();
+  }
+
+
+  // verifica se está vazio o campo input
+    if(inputNome.value === ''){
+      newPara.innerText = 'Preencha corretamente o campo!';
+      newPara.classList.add('ativo-erro-input')
+      if(!paraInputErro)
+      fieldNewErroInput.appendChild(newPara);
+    } else {
+      paraInputErro.remove();
+    }
+ 
+
+
+}
+

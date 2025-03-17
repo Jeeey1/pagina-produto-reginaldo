@@ -239,8 +239,10 @@
       <h2 class="titulo-form">Faça agora mesmo seu orçamento</h2>
       <label for="nome">Nome*</label>
       <input type="text" id="nome" name="nome" />
+      <div class="erro-input"></div>
       <div class="entrega">
         <label for=""><input type="radio" id="retirada" name="radio" value="retirada" required/>Retirada</label>
+        <div class="erro-check"></div>
         <div class="informa-retirada">
           <img src="assets_reginaldo/icone_atencao.png" alt="" />
           <p>Tempo estimado para conclusão do produto: 1 dia útil</p>
@@ -249,7 +251,7 @@
       <div class="produtos-selecionados">
         <h2>Produto(s) selecionado(s):</h2>
       </div>
-      <button>Enviar Orçamento</button>
+      <button class="enviar-orcamento">Enviar Orçamento</button>
     </form>
   </main>
   <footer>

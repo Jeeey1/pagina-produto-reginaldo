@@ -188,6 +188,11 @@ div.ativo .btn-number {
   outline: none;
 }
 
+#formulario > button:hover{
+  cursor: pointer;
+  background-color: #943535;
+}
+
 
 
 input[type="number"]::-webkit-inner-spin-button,
